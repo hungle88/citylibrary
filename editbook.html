@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homepage</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+        <script defer src="./js/library.js"></script>
+
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: #00b8ea"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"
+          >The CityLibrary :::a CS418 WebApp project</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">| About Us |</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./virtualtour.html">| Virtual Tour |</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./books.html">| Books |</a>
+            </li>
+          </ul>
+          <span class="navbar-text"> Welcome, Guest </span>
+        </div>
+      </div>
+    </nav>
+    <h3 style="color: #39b4da">Edit Book Form</h3>
+
+    <strong>Note:</strong> Form fields marked with asterisk (*) are required.
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-12">
+        <label for="inputTitle" class="form-label">*Book Title</label>
+        <input type="text" class="form-control" id="inputTitle" />
+        <!-- <div class="valid-tooltip">
+            Looks good!
+          </div> -->
+      </div>
+      <div class="col-md-6">
+        <label for="inputISBN" class="form-label">*ISBN</label>
+        <input type="text" class="form-control" id="inputISBN" />
+      </div>
+      <div class="col-md-6">
+        <label for="inputOverdue" class="form-label"
+          >*Overdue Fee per day</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="inputOverdue"
+          placeholder="0.00"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >Enter a valide decimal amount; in dollars and cents; no comma (eg.
+          1.99)</small
+        >
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputPublisher" class="form-label">*Publisher</label>
+        <input type="text" class="form-control" id="inputPublisher" />
+      </div>
+      <div class="col-md-6">
+        <label for="inputPubDate" class="form-label">*Date Published</label>
+        <input type="date" class="form-control" id="inputPubDate" />
+      </div>
+
+      <div class="col-12">
+        <div class="float-end">
+          <button type="submit" class="btn btn-outline-danger">Reset</button>
+          <button type="submit" class="btn btn-outline-success">
+            Save Book
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted float-end">Hung Le - CS418 - 2021</span>
+      </div>
+    </footer>
+  </body>
+</html>
