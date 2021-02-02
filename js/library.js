@@ -14,5 +14,5 @@ const books = document.getElementById("books");
 })();
 
 function render(item) {
-  return `<tr><td><strong>${item.bookId}.</td><td>${item.isbn}</td><td>${item.title}</td><td>${item.overdueFee}</td><td>${item.publisher}</td><td>${item.datePublished}</td></tr>`;
+  return `<tr><td><strong id="counter"></td><td>${item.isbn}</td><td>${item.title}</td><td>${item.overdueFee}</td><td>${item.publisher}</td><td>${item.datePublished}</td></tr>`;
 }
