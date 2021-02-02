@@ -7,8 +7,9 @@ const books = document.getElementById("books");
   );
   const results = await res.json();
   console.log(results);
+  let sortedResults = results.sort((a,b) => a.bookId - b.bookId);
 
-  results.forEach((item) => {
+  sortedResults.forEach((item) => {
     books.innerHTML += render(item);
   });
 })();
