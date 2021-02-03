@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homepage</title>
+    <title>Book List</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <script defer src="./js/library.js"></script>
+    <script defer src="./js/addBook.js"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: #00b8ea;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">The CityLibrary :::a CS418 WebApp project</a>
+          <a class="navbar-brand" href="./index.html">The CityLibrary&reg; :::a CS418 WebApp project</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,6 +34,8 @@
           </div>
         </div>
       </nav>
+      <div class="marginCenter">
+
       <h3 style="color: #39b4da">Books in our Collection  <a class="btn btn-outline-success float-end" href="./addnewbook.html">Add New Book</a></h3>      
 
       <hr>
@@ -39,7 +43,7 @@
 <thead><tr><th>#</th><th>ISBN</th><th>Book Title</th><th>Overdue Fee</th><th>Publisher</th><th>Date Published</th><th></th><th></th></tr></thead>
 <tbody id = "books"></tbody>
       </table>
-
+</div>
 <footer class="footer">
     <div class="container">
       <span class="text-muted float-end">Hung Le - CS418 - 2021</span>

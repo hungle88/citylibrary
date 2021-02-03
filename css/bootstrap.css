@@ -5,6 +5,17 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ 
+ /* my own */
+ .marginCenter{
+  margin: auto;
+  width: 90%;
+  padding: 10px; 
+
+}
+ .nounderline {
+  text-decoration: none !important
+}
 
  .footer {
   position: fixed;
@@ -15,6 +26,8 @@
   color: #cecece;
   text-align: center;
 }
+
+/* original */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

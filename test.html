@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Book</title>
+    <title>TEST</title>
     <link rel="stylesheet" href="./css/bootstrap.css" />
-        <script src="./js/editBook.js"></script>
-
+    <script defer src="./js/addBook.js"></script>
   </head>
   <body>
     <nav
@@ -15,7 +14,7 @@
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html"
-          >The CityLibrary&reg; :::a CS418 WebApp project</a
+          >The CityLibrary :::a CS418 WebApp project</a
         >
         <button
           class="navbar-toggler"
@@ -44,19 +43,19 @@
         </div>
       </div>
     </nav>
-    <div class="marginCenter">
-
-    <h3 style="color: #39b4da">Edit Book Form</h3>
+    <h3 style="color: #39b4da">New Book Form</h3>
 
     <strong>Note:</strong> Form fields marked with asterisk (*) are required.
-    <form class="row g-3 " id="addForm">
+    <form
+      class="row g-3"
+      name="addForm"
+      id="addForm"
+      onsubmit="addBook()"
+    >
       <input id="bookId" type="hidden" name="bookId" value="" />
       <div class="col-12">
         <label for="inputTitle" class="form-label">*Book Title</label>
-        <input type="text" class="form-control" id="inputTitle" />
-        <!-- <div class="valid-tooltip">
-            Looks good!
-          </div> -->
+        <input type="text" class="form-control" id="inputTitle" required />
       </div>
       <div class="col-md-6">
         <label for="inputISBN" class="form-label">*ISBN</label>
@@ -90,13 +89,16 @@
       <div class="col-12">
         <div class="float-end">
           <button type="reset" class="btn btn-outline-danger">Reset</button>
-          <button type="button" class="btn btn-outline-success" onclick= "editBook()">
-            Save Book
-          </button>
+          <input
+            type="button"
+            class="btn btn-outline-success"
+            value="Save Book"
+            onclick="addBook()"
+          />
         </div>
       </div>
     </form>
-</div>
+
     <footer class="footer">
       <div class="container">
         <span class="text-muted float-end">Hung Le - CS418 - 2021</span>
