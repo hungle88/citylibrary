@@ -1,6 +1,11 @@
 let id = location.search.split("?bookId=").slice(1);
 
-(async function start() {
+window.onload= async function start() {
+  const addForm = document.getElementById("addForm");
+  addForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    editBook(e);
+  });
   const res = await fetch(
     "https://elibraryrestapi.herokuapp.com/elibrary/api/book/list"
   );
@@ -16,7 +21,9 @@ let id = location.search.split("?bookId=").slice(1);
       document.getElementById("inputPubDate").value = results[i].datePublished;
     }
   }
-})();
+
+ 
+};
 
 async function editBook(key) {
   key = id;
@@ -36,5 +43,5 @@ async function editBook(key) {
       }),
     }
   );
-  location.reload();
+  alert("Book's info was updated")
 }

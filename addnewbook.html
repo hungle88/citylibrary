@@ -49,7 +49,7 @@
     <h3 style="color: #39b4da">New Book Form</h3>
 
     <strong>Note:</strong> Form fields marked with asterisk (*) are required.
-    <form class="row g-3 " id="addForm">
+    <form class="row g-3 " id="addForm" method="POST">
       <input id="bookId" type="hidden" name="bookId" value="" />
       <div class="col-12">
         <label for="inputTitle" class="form-label">*Book Title</label>
@@ -73,7 +73,7 @@
           placeholder="0.00" required
         />
         <small id="feeHelp" class="form-text text-muted"
-          >Enter a valide decimal amount; in dollars and cents; no comma (eg.
+          >Enter a valid decimal amount; in dollars and cents; no comma (eg.
           1.99)</small
         >
       </div>
@@ -90,7 +90,7 @@
       <div class="col-12">
         <div class="float-end">
           <button type="reset" class="btn btn-outline-danger">Reset</button>
-          <button type="button" class="btn btn-outline-success" onclick= "addBook()">
+          <button type="submit" class="btn btn-outline-success">
             Save Book
           </button>
         </div>

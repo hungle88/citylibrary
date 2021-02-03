@@ -49,18 +49,18 @@
     <h3 style="color: #39b4da">Edit Book Form</h3>
 
     <strong>Note:</strong> Form fields marked with asterisk (*) are required.
-    <form class="row g-3 " id="addForm">
+    <form class="row g-3 " id="addForm" method="POST">
       <input id="bookId" type="hidden" name="bookId" value="" />
       <div class="col-12">
         <label for="inputTitle" class="form-label">*Book Title</label>
-        <input type="text" class="form-control" id="inputTitle" />
+        <input type="text" class="form-control" id="inputTitle" required />
         <!-- <div class="valid-tooltip">
             Looks good!
           </div> -->
       </div>
       <div class="col-md-6">
         <label for="inputISBN" class="form-label">*ISBN</label>
-        <input type="text" class="form-control" id="inputISBN" />
+        <input type="text" class="form-control" id="inputISBN" required />
       </div>
       <div class="col-md-6">
         <label for="inputOverdue" class="form-label"
@@ -70,27 +70,27 @@
           type="text"
           class="form-control"
           id="inputOverdue"
-          placeholder="0.00"
+          placeholder="0.00" required
         />
         <small id="feeHelp" class="form-text text-muted"
-          >Enter a valide decimal amount; in dollars and cents; no comma (eg.
+          >Enter a valid decimal amount; in dollars and cents; no comma (eg.
           1.99)</small
         >
       </div>
 
       <div class="col-md-6">
         <label for="inputPublisher" class="form-label">*Publisher</label>
-        <input type="text" class="form-control" id="inputPublisher" />
+        <input type="text" class="form-control" id="inputPublisher" required/>
       </div>
       <div class="col-md-6">
         <label for="inputPubDate" class="form-label">*Date Published</label>
-        <input type="date" class="form-control" id="inputPubDate" />
+        <input type="date" class="form-control" id="inputPubDate" required/>
       </div>
 
       <div class="col-12">
         <div class="float-end">
           <button type="reset" class="btn btn-outline-danger">Reset</button>
-          <button type="button" class="btn btn-outline-success" onclick= "editBook()">
+          <button type="submit" class="btn btn-outline-success">
             Save Book
           </button>
         </div>
