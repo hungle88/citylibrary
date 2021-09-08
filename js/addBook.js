@@ -1,10 +1,3 @@
-// https://elibraryrestapi.herokuapp.com/elibrary/api/book/add
-// "isbn": document.getElementById("inputISBN").value,
-// "title": document.getElementById("inputTitle").value,
-// "overdueFee": document.getElementById("inputOverdue").value,
-// "publisher": document.getElementById("inputPublisher").value,
-// "datePublished": document.getElementById("inputPubDate").value,
-
 window.onload = function () {
   const addForm = document.getElementById("addForm");
   addForm.addEventListener("submit", function (e) {
@@ -13,6 +6,7 @@ window.onload = function () {
   });
 };
 
+//add a new book to library
 async function addBook(event) {
   const response = await fetch(
     "https://elibraryrestapi.herokuapp.com/elibrary/api/book/add",
@@ -38,6 +32,8 @@ async function addBook(event) {
   alert("Book was added");
 }
 
+
+//delete a book from library
 async function deleteBook(id) {
   let result = confirm("This book will be removed. Do you want to continue?");
   if (result) {

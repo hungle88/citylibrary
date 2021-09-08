@@ -6,6 +6,8 @@ window.onload= async function start() {
     e.preventDefault();
     editBook(e);
   });
+  
+  // fetch the selected book
   const res = await fetch(
     "https://elibraryrestapi.herokuapp.com/elibrary/api/book/list"
   );
@@ -25,6 +27,7 @@ window.onload= async function start() {
  
 };
 
+//edit the selected book
 async function editBook(key) {
   key = id;
   const response = await fetch(
